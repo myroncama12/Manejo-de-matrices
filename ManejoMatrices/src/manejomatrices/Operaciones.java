@@ -42,13 +42,60 @@ public class Operaciones {
         return matrizC;
     }
     else{
-        for(int i=0; i<matrizA.lenght(); i++ ){
-            for(int j=0; j<matrizB[i].length; j++ ){
-                System.out.println(b[i][j]);
+        matrizC.setFilas(matrizA.getFilas());
+        matrizC.setColumnas(matrizA.getColumnas());
+        matrizC.setTamañoMatriz();
+        float matrizTemp[][]=matrizC.getMatriz() ;
+        for(int i=0; i<matrizA.getFilas(); i++ ){
+            for(int j=0; j<matrizA.getColumnas(); j++ ){
+                matrizTemp[i][j]=(float)matrizA.getMatriz()[i][j]+(float)matrizB.getMatriz()[i][j];
             }
         }
+        matrizC.setMatriz(matrizTemp);
     }
     
+    return matrizC;
+    };
+    
+    Matriz restaDeMatrices(Matriz matrizA, Matriz matrizB){
+    Matriz matrizC=new Matriz();
+    if(verificarTamañoSuma(matrizA, matrizB)==false){
+        return matrizC;
+    }
+    else{
+        matrizC.setFilas(matrizA.getFilas());
+        matrizC.setColumnas(matrizA.getColumnas());
+        matrizC.setTamañoMatriz();
+        float matrizTemp[][]=matrizC.getMatriz() ;
+        for(int i=0; i<matrizA.getFilas(); i++ ){
+            for(int j=0; j<matrizA.getColumnas(); j++ ){
+                matrizTemp[i][j]=(float)matrizA.getMatriz()[i][j]-(float)matrizB.getMatriz()[i][j];
+            }
+        }
+        matrizC.setMatriz(matrizTemp);
+    }
+    
+    return matrizC;
+    };
+    
+    
+    Matriz multiplicaciónDeMatrices(Matriz matrizA, Matriz matrizB){
+    Matriz matrizC=new Matriz();
+    if(verificarTamañoMultiplicación(matrizA, matrizB)==false){
+        return matrizC;
+    }
+    else{
+        matrizC.setFilas(matrizA.getFilas());
+        matrizC.setColumnas(matrizA.getColumnas());
+        matrizC.setTamañoMatriz();
+        float matrizTemp[][]=matrizC.getMatriz() ;
+        for(int i=0; i<matrizA.getFilas(); i++ ){
+            for(int j=0; j<matrizA.getColumnas(); j++ ){
+                matrizTemp[i][j]=(float)matrizA.getMatriz()[i][j]+(float)matrizB.getMatriz()[i][j];
+            }
+        }
+        matrizC.setMatriz(matrizTemp);
+    }
     
     return matrizC;
     };

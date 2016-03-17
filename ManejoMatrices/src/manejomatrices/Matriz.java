@@ -39,12 +39,10 @@ public class Matriz {
     }
     
     public Matriz() {
-    matriz= new float[filas][columnas];   
+   
     }
-    
-    int lenght(){  
-    return columnas*filas;
+    void setTamañoMatriz(){
+        matriz= new float[filas][columnas];
     };
-    
     
 }
