@@ -94,13 +94,31 @@ public class Operaciones {
             for (int i = 0; i < matrizA.getColumnas(); i++) {
                 for (int j = 0; j < matrizC.getFilas(); j++) {
                     for (int k = 0; k < matrizC.getColumnas(); k++) {
-                       matrizTemp[i][j]+=(float) matrizA.getMatriz()[i][k] * (float) matrizB.getMatriz()[k][j];
-                        
+                        matrizTemp[i][j] += (float) matrizA.getMatriz()[i][k] * (float) matrizB.getMatriz()[k][j];
                     }
                 }
             }
             matrizC.setMatriz(matrizTemp);
         }
+
+        return matrizC;
+    }
+
+    ;
+    
+    Matriz multiplicaciónEscalarDeMatrices(Matriz matrizA, float escalar) {
+        Matriz matrizC = new Matriz();
+        matrizC.setFilas(matrizA.getFilas());
+        matrizC.setColumnas(matrizA.getColumnas());
+        matrizC.setTamañoMatriz();
+        float matrizTemp[][] = matrizC.getMatriz();
+        for (int i = 0; i < matrizA.getFilas(); i++) {
+            for (int j = 0; j < matrizA.getColumnas(); j++) {
+                matrizTemp[i][j]=(float)((matrizA.getMatriz()[i][j])*escalar);
+                System.out.println(matrizTemp[i][j]);
+            }
+        }
+        matrizC.setMatriz(matrizTemp);
 
         return matrizC;
     }
