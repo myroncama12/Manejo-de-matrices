@@ -115,7 +115,6 @@ public class Operaciones {
         for (int i = 0; i < matrizA.getFilas(); i++) {
             for (int j = 0; j < matrizA.getColumnas(); j++) {
                 matrizTemp[i][j]=(float)((matrizA.getMatriz()[i][j])*escalar);
-                System.out.println(matrizTemp[i][j]);
             }
         }
         matrizC.setMatriz(matrizTemp);
