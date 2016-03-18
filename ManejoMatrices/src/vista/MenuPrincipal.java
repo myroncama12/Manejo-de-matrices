@@ -35,6 +35,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnSumRestMult.setText("Sumar/restar/multiplicar");
+        btnSumRestMult.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnSumRestMultMouseClicked(evt);
+            }
+        });
 
         jButton2.setText("Multiplicar por escalar");
 
@@ -71,6 +76,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSumRestMultMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSumRestMultMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+        VistaSumaRestaMultiplicacion sumResMult= new VistaSumaRestaMultiplicacion();
+        sumResMult.setVisible(true);
+    }//GEN-LAST:event_btnSumRestMultMouseClicked
 
     /**
      * @param args the command line arguments
@@ -114,3 +126,4 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     // End of variables declaration//GEN-END:variables
 }
+

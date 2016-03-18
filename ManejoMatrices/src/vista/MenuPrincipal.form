@@ -56,6 +56,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Sumar/restar/multiplicar"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnSumRestMultMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>

@@ -5,6 +5,8 @@
  */
 package manejomatrices;
 
+import vista.MenuPrincipal;
+
 /**
  *
  * @author Valakuth
@@ -62,6 +64,10 @@ public class ManejoMatrices {
             }
             System.out.print("\n");
         }
+        
+        //Pruebas de la interfaz gŕafica
+        MenuPrincipal ventanaPrincipal=new MenuPrincipal();
+        ventanaPrincipal.setVisible(true);
     }
     
 }
